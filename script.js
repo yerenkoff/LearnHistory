@@ -11,6 +11,7 @@ let score = 0
 let selectedButtons = []
 let usedNumbers = []
 
+
 function startGame() {
     setTimeout(() => {
         // game.style.opacity = 1
