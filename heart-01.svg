@@ -1,0 +1,35 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="915.54" height="640.01" viewBox="0 0 915.54 640.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ef7f7f00;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fe0;
+      }
+
+      .cls-3 {
+        fill: #008cff;
+      }
+
+      .cls-4 {
+        fill: #ef5454;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>heart</title>
+  <path class="cls-1" d="M456.26,638.36c-553-249-529-602-310-633s314,135,314,135,117.65-151.4,294-129C1006.26,43.36,997.26,376.36,456.26,638.36Z"/>
+  <rect class="cls-2" x="66.26" y="220.05" width="298" height="85" transform="translate(430.52 525.11) rotate(180)"/>
+  <rect class="cls-3" x="66.26" y="135.05" width="298" height="85" transform="translate(430.52 355.11) rotate(180)"/>
+  <rect class="cls-4" x="542.13" y="220.05" width="298" height="85" transform="translate(1382.27 525.11) rotate(180)"/>
+  <rect class="cls-5" x="542.13" y="135.05" width="298" height="85" transform="translate(1382.27 355.11) rotate(180)"/>
+  <rect class="cls-3" x="542.13" y="193.5" width="298" height="53.1" transform="translate(1382.27 440.11) rotate(180)"/>
+</svg>
