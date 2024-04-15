@@ -1,5 +1,7 @@
-import { uas, rus } from "./words.js"
-
+import { ruswords } from "./rus.js"
+import { engwords } from "./eng.js"
+let rus = ruswords
+let uas = engwords
 let leftArray = []
 let rightArray = []
 let leftButtons = document.getElementsByClassName("left")

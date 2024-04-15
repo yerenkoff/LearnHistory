@@ -75,7 +75,7 @@ body #game button:hover {
 }
 body #game button.dis {
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.3;
   border: 2px solid rgba(255, 255, 255, 0.3333333333) !important;
 }
 
