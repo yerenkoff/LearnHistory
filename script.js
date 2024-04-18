@@ -47,7 +47,7 @@ function startGame() {
         usedNumbers.push(myNumbers[r])
         leftArray.push(myNumbers[r])
         rightArray.push(myNumbers[r])
-        myNumbers.splice(myNumbers[r], 1)
+        myNumbers.splice(r, 1)
     }
     for (let i = 3; i >= 0; i--) {
         let randomNumber = Math.floor(Math.random() * i)
