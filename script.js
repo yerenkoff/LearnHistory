@@ -26,17 +26,28 @@ function startGame() {
     rightArray = []
     guessed = 0
     console.log("start", guessed);
+    // for (let i = 0; i < 4; i++) {
+    //     let r = Math.floor(Math.random() * (myNumbers.length-1))
+    //     // while (usedNumbers.includes(r)) {
+    //     //     r = Math.floor(Math.random() * uas.length)
+    //     // }
+    //     console.log(r);
+    //     usedNumbers.push(r)
+    //     leftArray.push(r)
+    //     rightArray.push(r)
+    //     myNumbers.splice(r, 1)
+    //     // console.log(myNumbers);
+    // }
     for (let i = 0; i < 4; i++) {
         let r = Math.floor(Math.random() * (myNumbers.length-1))
         // while (usedNumbers.includes(r)) {
         //     r = Math.floor(Math.random() * uas.length)
         // }
-        console.log(r);
-        usedNumbers.push(r)
-        leftArray.push(r)
-        rightArray.push(r)
-        myNumbers.splice(r, 1)
-        // console.log(myNumbers);
+        console.log(myNumbers[r]);
+        usedNumbers.push(myNumbers[r])
+        leftArray.push(myNumbers[r])
+        rightArray.push(myNumbers[r])
+        myNumbers.splice(myNumbers[r], 1)
     }
     for (let i = 3; i >= 0; i--) {
         let randomNumber = Math.floor(Math.random() * i)
@@ -99,19 +110,19 @@ function startGame() {
                     guessed = guessed + 2
                     // setTimeout(() => {
 
+                    let canRestart = true
                     for (let btn of selectedButtons) {
                         btn.style.transform = "scale(1.02)"
                         setTimeout(() => {
                             btn.style.transform = "scale(1)"
                             btn.classList.add("dis")
 
-                            let canRestart = true
                             if (guessed == 8 && canRestart) {
+                                canRestart = false
                                 // game.style.opacity = 0
                                 console.log("start again", guessed);
                                 setTimeout(() => {
                                     startGame()
-                                    canRestart = false
                                 }, 0)
                             }
                         }, 300)
