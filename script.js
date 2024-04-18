@@ -12,25 +12,31 @@ let score = 0
 
 let selectedButtons = []
 let usedNumbers = []
+let myNumbers = []
+for (let i = 0; i < uas.length; i++) {
+    
+    myNumbers.push(i)
+   
 
+}
 
 function startGame() {
-    setTimeout(() => {
-        // game.style.opacity = 1
-
-    }, 1000)
+    
     leftArray = []
     rightArray = []
     guessed = 0
+    console.log("start", guessed);
     for (let i = 0; i < 4; i++) {
-        let r = Math.floor(Math.random() * uas.length)
-        while (usedNumbers.includes(r)) {
-            r = Math.floor(Math.random() * uas.length)
-        }
+        let r = Math.floor(Math.random() * (myNumbers.length-1))
+        // while (usedNumbers.includes(r)) {
+        //     r = Math.floor(Math.random() * uas.length)
+        // }
+        console.log(r);
         usedNumbers.push(r)
         leftArray.push(r)
         rightArray.push(r)
-
+        myNumbers.splice(r, 1)
+        // console.log(myNumbers);
     }
     for (let i = 3; i >= 0; i--) {
         let randomNumber = Math.floor(Math.random() * i)
@@ -57,7 +63,9 @@ function startGame() {
         }
         b.innerHTML = i % 2 == 0 ? uas[mainArray[i]] : rus[mainArray[i]]
         // if (b.classList.length > 1) {
+            // console.log(b);
         b.classList.remove("dis")
+        // console.log(b.classList);
         b.style.border = "2px solid #ffffff30"
         // }
         b.onclick = () => {
@@ -97,10 +105,13 @@ function startGame() {
                             btn.style.transform = "scale(1)"
                             btn.classList.add("dis")
 
-                            if (guessed == 8) {
+                            let canRestart = true
+                            if (guessed == 8 && canRestart) {
                                 // game.style.opacity = 0
+                                console.log("start again", guessed);
                                 setTimeout(() => {
                                     startGame()
+                                    canRestart = false
                                 }, 0)
                             }
                         }, 300)
